@@ -55,22 +55,6 @@ M$InteractionOrderHierarchy = {
 (* ************************** *)
 M$ClassesDescription = {
 
-S[7] == { ClassName -> Xr,
-	  SelfConjugate -> True,
-	  Mass -> {MXr, 10.},
-          Width -> 0,
-          PDG -> 5000511,
-          TeX -> Subscript[X,r],
-          FullName -> "Real scalar DM" },
-
-S[8] == { ClassName -> Xc,
-  	  SelfConjugate -> False,
-  	  Mass -> {MXc, 10.},
-  	  Width -> 0,
-          PDG -> 5000512,
-          TeX -> Subscript[X,c],
-          FullName -> "Complex scalar DM" },
-
 F[7] == { ClassName -> Xd,
           SelfConjugate -> False,
 	  Mass -> {MXd, 10.},
