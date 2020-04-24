@@ -1,0 +1,3 @@
+*.DS_Store
+FeynRules/feynrules-current/*
+!FeynRules/feynrules-current/Models/

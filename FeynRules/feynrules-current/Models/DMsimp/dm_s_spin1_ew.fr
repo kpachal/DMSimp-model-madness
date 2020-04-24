@@ -1,0 +1,40 @@
+(* ****************************************************************** *)
+(* *****                                                        ***** *)
+(* *****  FeynRules model file: Simplified s-channel DM models  ***** *)
+(* *****  Author: A. Martini, K. Mawatari                       ***** *)
+(* *****          J. Wang, C.Zhang                              ***** *)
+(* *****                                                        ***** *)
+(* ****************************************************************** *)
+
+(* ************************** *)
+(* *****  Change  log   ***** *)
+(* ************************** *)
+
+(* 2015.08.24 v1.0 - release version. *)
+
+
+(* ************************** *)
+(* *****   Parameters   ***** *)
+(* ************************** *)  
+M$Parameters = {
+
+(* EW couplings with the spin-1 mediator *)
+ gVh == { 
+      ParameterType -> External,
+      InteractionOrder -> {DMV, 1},
+      BlockName -> DMINPUTS,
+      TeX -> Subscript[g,Vh],
+      Description -> "h-Y1 vector coupling",
+      Value -> 0. }
+
+};
+
+
+(* ************************** *)
+(* *****   Lagrangian   ***** *)
+(* ************************** *)
+
+L1SMEW := Module[{ii}, ExpandIndices[
+	I gVh/2*(Phibar[ii] DC[Phi[ii],mu] - DC[Phibar[ii],mu] Phi[ii]) Y1[mu],
+        FlavorExpand->{SU2D,SU2W}]];
+
