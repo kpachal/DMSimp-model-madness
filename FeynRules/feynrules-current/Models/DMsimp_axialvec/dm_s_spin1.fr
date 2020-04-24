@@ -180,24 +180,7 @@ M$Parameters = {
       BlockName -> DMINPUTS,
       TeX -> Subscript[g,nut],
       Description -> "nu_tau-Y1 coupling",
-      Value -> 0. },
-
- gAu31 == {
-      ParameterType -> External,
-      InteractionOrder -> {DMV, 1},
-      BlockName -> DMINPUTS,
-      TeX -> Subscript[g,Au31],
-      Description -> "FV t-u-Y1 axial-vector coupling",
-      Value -> 0.25 },
-
- gAd31 == {
-      ParameterType -> External,
-      InteractionOrder -> {DMV, 1},
-      BlockName -> DMINPUTS,
-      TeX -> Subscript[g,Ad31],
-      Description -> "FV b-d-Y1 axial-vector coupling",
-      Value -> 0.25 }
-
+      Value -> 0. }
 
 };
 
@@ -213,11 +196,7 @@ L1SM := dbar.Ga[mu].(gAd11 Ga[5]).d Y1[mu] +
         sbar.Ga[mu].(gAd22 Ga[5]).s Y1[mu] +
         cbar.Ga[mu].(gAu22 Ga[5]).c Y1[mu] +
         bbar.Ga[mu].(gAd33 Ga[5]).b Y1[mu] +
-        tbar.Ga[mu].(gAu33 Ga[5]).t Y1[mu] +
-        tbar.Ga[mu].(gAu31 Ga[5]).u Y1[mu] +
-        ubar.Ga[mu].(gAu31 Ga[5]).t Y1[mu] +
-        bbar.Ga[mu].(gAd31 Ga[5]).d Y1[mu] +
-        dbar.Ga[mu].(gAd31 Ga[5]).b Y1[mu];
+        tbar.Ga[mu].(gAu33 Ga[5]).t Y1[mu];
 
 L1SMlep := ebar. Ga[mu].(gAl11 Ga[5]).e  Y1[mu] + 
 	   mubar.Ga[mu].(gAl22 Ga[5]).mu Y1[mu] + 
